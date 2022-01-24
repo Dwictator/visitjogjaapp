@@ -3,6 +3,7 @@ package com.example.visitapp;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.os.Handler;
 import android.text.TextUtils;
@@ -65,38 +66,38 @@ public class EditprofilActivity extends AppCompatActivity {
     }
 
     public void updatedata(){
-
         SharedPrefManager sharedPrefManager = new SharedPrefManager(EditprofilActivity.this);
-        String sharedprefid = sharedPrefManager.getId();
+        String idFetch = sharedPrefManager.getId();
 
-        UpdateRequest updateRequest = new UpdateRequest(sharedprefid);
+        UpdateRequest updateRequest = new UpdateRequest();
         updateRequest.setEmail(email.getText().toString());
         updateRequest.setUsername(username.getText().toString());
         updateRequest.setPassword(password.getText().toString());
 
-        Call<UpdateResponse> updateResponseCall = ApiClient.getUserService().userUpdate(sharedprefid, updateRequest);
+        Call<UpdateResponse> updateResponseCall = ApiClient.getUserService().userUpdate("61eec296b2915bd5deafcb97", updateRequest);
         updateResponseCall.enqueue(new Callback<UpdateResponse>() {
             @Override
             public void onResponse(Call<UpdateResponse> call, Response<UpdateResponse> response) {
 
                 if(response.isSuccessful()){
-                    Toast.makeText(EditprofilActivity.this,"Update Successful", Toast.LENGTH_LONG).show();
-                    UpdateResponse signupResponse =  response.body();
-
+                    Toast.makeText(EditprofilActivity.this,"Update Berhasil", Toast.LENGTH_LONG).show();
+                    UpdateResponse updateResponse =  response.body();
+/**
                     new Handler().postDelayed(new Runnable() {
                         @Override
                         public void run() {
-                            finish();
+                           finish();
                         }
                     }, 700);
+**/
                 }else{
-                    Toast.makeText(EditprofilActivity.this,"Sign up gagal. Coba lagi", Toast.LENGTH_LONG).show();
+                    Toast.makeText(EditprofilActivity.this,"Update gagal. Coba Sesaat lagi", Toast.LENGTH_LONG).show();
                 }
             }
 
             @Override
             public void onFailure(Call<UpdateResponse> call, Throwable t) {
-                Toast.makeText(EditprofilActivity.this,"Throwable"+t.getLocalizedMessage(), Toast.LENGTH_LONG).show();
+                Toast.makeText(EditprofilActivity.this,"Throwable "+t.getLocalizedMessage(), Toast.LENGTH_LONG).show();
             }
         });
 

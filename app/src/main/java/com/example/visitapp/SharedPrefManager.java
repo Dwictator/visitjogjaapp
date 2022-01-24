@@ -7,7 +7,7 @@ public class SharedPrefManager {
     SharedPreferences sharedPreferences;
     SharedPreferences.Editor editor;
 
-    public SharedPrefManager(Context context ){
+    public SharedPrefManager(Context context){
         sharedPreferences = context.getSharedPreferences("Latihan shared_pref", context.MODE_PRIVATE);
         editor = sharedPreferences.edit();
     }

@@ -63,7 +63,7 @@ public class ProfileFragment extends Fragment {
         adapter.setData(datas);
 
 
-        username.setText(sharedPrefManager.getId());
+        username.setText(sharedPrefManager.getUsername());
         email.setText(sharedPrefManager.getEmail());
 
         String namaImage =(sharedPrefManager.getFoto()) ;

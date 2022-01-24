@@ -174,18 +174,16 @@ public class login_activity extends AppCompatActivity {
                         }, 700);
 
                     } else {
-                        Toast.makeText(login_activity.this, "Login Failed. Check Your Username or Password", Toast.LENGTH_LONG).show();
+                        if(response.isSuccessful() == false){
+                            Toast.makeText(login_activity.this, "Login Failed. Check Your Username or Password", Toast.LENGTH_LONG).show();
+                        }
                     }
                 }
 
-                //
-//            @Override
-//            public void onFailure(Call<LoginResponse> call, Throwable t) {
-//                Toast.makeText(login_activity.this,"Throwable"+t.getLocalizedMessage(), Toast.LENGTH_LONG).show();
-//            }
+
                 @Override
                 public void onFailure(Call<LoginResponse> call, Throwable t) {
-                    Toast.makeText(login_activity.this, "Login Failed. Try again." + t.getLocalizedMessage(), Toast.LENGTH_LONG).show();
+                    Toast.makeText(login_activity.this, "Login Failed. Try again. " + t.getLocalizedMessage(), Toast.LENGTH_LONG).show();
                 }
 
             });

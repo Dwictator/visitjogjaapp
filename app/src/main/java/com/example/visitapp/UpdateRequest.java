@@ -4,9 +4,7 @@ import android.content.Context;
 
 import androidx.appcompat.app.AppCompatActivity;
 
-public class UpdateRequest extends AppCompatActivity {
-
-    SharedPrefManager sharedPrefManager = new SharedPrefManager(UpdateRequest.this);
+public class UpdateRequest{
 
     private String _id ;
     private String email;
@@ -17,8 +15,8 @@ public class UpdateRequest extends AppCompatActivity {
         return _id;
     }
 
-    public void setId(String id) {
-        this._id = id;
+    public void setId(String _id) {
+        this._id = _id;
     }
 
     public String getEmail(){
@@ -45,7 +43,4 @@ public class UpdateRequest extends AppCompatActivity {
         this.password = password;
     }
 
-    public UpdateRequest(String _id){
-        this._id = _id;
-    }
 }

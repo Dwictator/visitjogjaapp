@@ -104,7 +104,7 @@
                                 android:layout_gravity="center"
                                 android:backgroundTint="@color/primary2"
                                 android:fontFamily="@font/montserrat_bold"
-                                android:text="Edit"
+                                android:text="Edit Profile"
                                 android:layout_marginRight="20dp"
                                 android:textAllCaps="false"
                                 android:textColor="@color/white"

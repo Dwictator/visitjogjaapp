@@ -98,7 +98,7 @@ public class SignupActivity extends AppCompatActivity {
                     }, 700);
 
                 }else{
-                    Toast.makeText(SignupActivity.this,"Sign up gagal. Coba lagi", Toast.LENGTH_LONG).show();
+                    Toast.makeText(SignupActivity.this,"Sign up gagal. Coba lagi. Pastikan username lebih dari 3 karakter dan password 6 karakter", Toast.LENGTH_LONG).show();
                 }
             }
 

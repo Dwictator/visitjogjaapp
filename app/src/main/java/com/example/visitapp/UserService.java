@@ -27,8 +27,8 @@ public interface UserService {
    Call<SignupResponse> userSignup(@Body SignupRequest signupRequest);
 
    @Headers("Content-Type: application/json")
-   @POST("users/update/{_id}")
-   Call<UpdateResponse> userUpdate(@Path("_id") String _id, @Body UpdateRequest updateRequest);
+   @POST("users/update/{id}")
+   Call<UpdateResponse> userUpdate(@Path("id") String _id, @Body UpdateRequest updateRequest);
 
 }
 
