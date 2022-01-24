@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:id="@+id/item1"
+        android:title="Home"
+        android:icon="@drawable/ic_home"></item>
+
+    <item android:id="@+id/item2"
+        android:title="Wisata"
+        android:icon="@drawable/ic_wisata"></item>
+
+    <item android:id="@+id/item3"
+        android:title="Favorit"
+        android:icon="@drawable/ic_favorite"></item>
+
+    <item android:id="@+id/item4"
+        android:title="Profil"
+        android:icon="@drawable/ic_profile"></item>
+</menu>

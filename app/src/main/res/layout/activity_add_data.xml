@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.AddDataActivity">
+
+    <LinearLayout
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:paddingTop="100dp">
+
+<TextView
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:text="Input Data Wisata"
+    android:textColor="@color/primary"
+    android:textSize="24sp"
+    android:layout_marginBottom="20dp"
+    android:fontFamily="@font/montserrat_bold"/>
+
+        <EditText
+            android:id="@+id/etJudul"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="judul"
+            tools:layout_editor_absoluteX="140dp"
+            tools:layout_editor_absoluteY="242dp" />
+
+        <EditText
+            android:id="@+id/etLokasi"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="lokasi"
+            tools:layout_editor_absoluteX="140dp"
+            tools:layout_editor_absoluteY="197dp" />
+
+        <EditText
+            android:id="@+id/etDeskripsi"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="deskripsi"
+            android:inputType="text|textMultiLine"/>
+
+        <TextView
+            android:layout_marginTop="10dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Nama file foto harus sama dengan file di folder drawable"
+            android:fontFamily="@font/montserrat_regular"
+            android:textColor="@color/primary"/>
+
+        <EditText
+            android:id="@+id/etFoto"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="nama file foto"/>
+
+
+        <TextView
+            android:layout_marginTop="10dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Kategori Wisata"
+            android:fontFamily="@font/montserrat_medium"
+            android:textColor="@color/primary"/>
+
+        <Spinner
+            android:id="@+id/Kategori"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:entries="@array/kategori" />
+
+        <Button
+            android:id="@+id/btnSave"
+            android:layout_marginTop="40dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/teal_700"
+            android:hint="Save"
+            android:textAllCaps="false"
+            android:textColorHint="@color/white"
+            tools:layout_editor_absoluteX="140dp"
+            tools:layout_editor_absoluteY="302dp" />
+
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

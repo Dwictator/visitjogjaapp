@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">VisitJogja</string>
+
+
+    <string-array name="kategori">
+        <item>pantai</item>
+        <item>museum</item>
+        <item>air terjun</item>
+        <item>candi</item>
+    </string-array>
+    <string name="search_text">Cari tempat wisata disini</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="title_activity_bottom_navigation">bottom_navigation</string>
+    <string name="title_home">Home</string>
+    <string name="title_dashboard">Das_Wisata</string>
+    <string name="title_notifications">Not_Favorite</string>
+    <string name="title_profile">Profile</string>
+
+</resources>

@@ -1,0 +1,146 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".login_activity"
+    android:background="@color/white">
+
+    <ProgressBar
+        android:id="@+id/pbLogin"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:visibility="gone"
+        app:layout_constraintTop_toBottomOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/ln"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <ImageView
+        android:id="@+id/ivLogin"
+        android:layout_width="150dp"
+        android:layout_height="105dp"
+        android:layout_marginTop="130dp"
+        android:background="@drawable/logo"
+        app:layout_constraintTop_toBottomOf="@+id/ln"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"/>
+
+    <LinearLayout
+        android:id="@+id/ln"
+        android:layout_marginTop="50dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintTop_toBottomOf="@+id/ivLogin">
+
+<!--        <TextView-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:text="Selamat Datang"-->
+<!--            android:textSize="14dp"-->
+<!--            android:fontFamily="@font/montserrat_semibold"-->
+<!--            android:textColor="@color/primary2"-->
+<!--            android:layout_marginBottom="10dp"-->
+<!--            android:layout_marginLeft="25dp"/>-->
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_marginStart="25dp"
+        android:layout_marginEnd="25dp"
+        android:layout_marginTop="10dp"
+        android:orientation="vertical"
+        android:gravity="center"
+        app:layout_constraintTop_toBottomOf="@+id/ln"
+        app:layout_constraintEnd_toEndOf="@+id/ln"
+        app:layout_constraintStart_toStartOf="@id/ln"
+        android:background="@drawable/shape_outline">
+
+        <EditText
+            android:id="@+id/etUsername"
+            android:layout_width="match_parent"
+            android:layout_marginLeft="10dp"
+            android:layout_height="35dp"
+            android:background="@null"
+            android:hint="Username"
+            android:textSize="14dp"
+            android:inputType="text"
+            android:textColor="@color/primary"
+            android:textColorHint="@color/primary"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:orientation="vertical"
+        android:layout_marginStart="25dp"
+        android:layout_marginEnd="25dp"
+        android:layout_marginTop="60dp"
+        app:layout_constraintTop_toBottomOf="@+id/ln"
+        app:layout_constraintEnd_toEndOf="@+id/ln"
+        app:layout_constraintStart_toStartOf="@id/ln"
+        android:gravity="center"
+        android:background="@drawable/shape_outline">
+
+        <EditText
+            android:id="@+id/etPassword"
+            android:layout_width="match_parent"
+            android:layout_marginLeft="10dp"
+            android:layout_height="35dp"
+            android:background="@null"
+            android:hint="Password"
+            android:textSize="14dp"
+            android:inputType="textPassword"
+            android:textColor="@color/primary"
+            android:textColorHint="@color/primary"/>
+
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/btnSignIn"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_marginStart="25dp"
+        android:layout_marginLeft="32dp"
+        android:layout_marginTop="130dp"
+        android:layout_marginEnd="25dp"
+        android:layout_marginRight="32dp"
+        android:background="@drawable/shape_fill_round"
+        android:text="Sign In"
+        android:textColor="@color/white"
+        app:layout_constraintTop_toBottomOf="@+id/ln"
+        app:layout_constraintEnd_toEndOf="@+id/ln"
+        app:layout_constraintStart_toStartOf="@id/ln"/>
+
+    <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:fontFamily="@font/montserrat_regular"
+            android:text="Belum mempunyai Akun?"
+            android:textColor="@color/primary"
+            android:textSize="12sp"
+            app:layout_constraintTop_toBottomOf="@+id/btnSignIn"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"/>
+
+    <TextView
+        android:id="@+id/tvSignUp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="50dp"
+        android:fontFamily="@font/montserrat_bold"
+        android:text="Sign Up"
+        android:textColor="@color/primary2"
+        android:textSize="14sp"
+        app:layout_constraintTop_toBottomOf="@+id/btnSignIn"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
